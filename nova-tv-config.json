@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-20T13:48:00.000Z",
+  "theme": {
+    "name": "My Melody",
+    "backgroundColor": "#FCEEF2",
+    "surfaceColor": "#FFFFFF",
+    "accentColor": "#EE98AE",
+    "accentSecondary": "#E7829C",
+    "textColor": "#5C3A4D",
+    "textMuted": "#A67C8D",
+    "cardRadius": 18,
+    "fontScale": 1,
+    "spacing": 16,
+    "cardSize": "medium",
+    "backgroundImage": "/themes/mymelody.png",
+    "stickerIndex": 13,
+    "secondarySticker": "deco-set",
+    "showRibbonBadge": true,
+    "showFloralDeco": true,
+    "stickerComposition": "cluster"
+  },
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "visible": true,
+      "order": 0,
+      "label": "ส่วนหัว"
+    },
+    {
+      "id": "connect",
+      "type": "connect",
+      "visible": true,
+      "order": 1,
+      "label": "Connect Laptop"
+    },
+    {
+      "id": "favorites",
+      "type": "favorites",
+      "visible": true,
+      "order": 2,
+      "label": "Favorite Apps"
+    },
+    {
+      "id": "quickSettings",
+      "type": "quickSettings",
+      "visible": true,
+      "order": 3,
+      "label": "Quick Settings"
+    }
+  ],
+  "apps": [
+    {
+      "id": "youtube",
+      "packageName": "com.google.android.youtube.tv",
+      "displayName": "YouTube",
+      "icon": "youtube",
+      "visible": true,
+      "order": 0,
+      "category": "streaming"
+    },
+    {
+      "id": "netflix",
+      "packageName": "com.netflix.ninja",
+      "displayName": "Netflix",
+      "icon": "netflix",
+      "visible": true,
+      "order": 1,
+      "category": "streaming"
+    },
+    {
+      "id": "prime",
+      "packageName": "com.amazon.amazonvideo.livingroom",
+      "displayName": "Prime Video",
+      "icon": "prime",
+      "visible": true,
+      "order": 2,
+      "category": "streaming"
+    },
+    {
+      "id": "disney",
+      "packageName": "com.disney.disneyplus",
+      "displayName": "Disney+",
+      "icon": "disney",
+      "visible": true,
+      "order": 3,
+      "category": "streaming"
+    },
+    {
+      "id": "spotify",
+      "packageName": "com.spotify.tv.android",
+      "displayName": "Spotify",
+      "icon": "spotify",
+      "visible": true,
+      "order": 4,
+      "category": "music"
+    },
+    {
+      "id": "playstore",
+      "packageName": "com.android.vending",
+      "displayName": "Play Store",
+      "icon": "playstore",
+      "visible": true,
+      "order": 5,
+      "category": "system"
+    }
+  ],
+  "connectLaptop": {
+    "label": "Connect Laptop",
+    "subtitle": "Wireless Screen Sharing",
+    "icon": "monitor",
+    "receiverPackage": "com.mediatek.androidbox",
+    "receiverActivity": "com.mediatek.androidbox.MainActivity",
+    "launchStrategy": "manual",
+    "instructions": "กด Win + K บน Windows 11 แล้วเลือก TV ของคุณ",
+    "showStatus": true
+  }
+}

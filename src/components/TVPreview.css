@@ -1,0 +1,725 @@
+/* ─── TV Preview Component Styles ─── */
+.tv-preview-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 300ms ease;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Standard Dark OLED Leanback Layout
+───────────────────────────────────────────────────────────── */
+.tv-screen {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  overflow: hidden;
+}
+
+.tv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tv-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tv-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.3);
+}
+
+.tv-brand-name {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.tv-date {
+  font-size: 8px;
+}
+
+.tv-header-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tv-header-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.tv-connect-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  transition: all 200ms ease;
+}
+
+.tv-connect-card.focused {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+  transform: scale(1.01);
+}
+
+.tv-connect-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tv-connect-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tv-connect-title {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.tv-connect-subtitle {
+  font-size: 8px;
+}
+
+.tv-connect-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tv-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.tv-status-dot.ready {
+  background: #22C55E;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+}
+
+.tv-apps-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+}
+
+.tv-section-title {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tv-apps-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tv-app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1.5px solid transparent;
+  transition: all 200ms ease;
+  flex-shrink: 0;
+}
+
+.tv-app-card.focused {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25);
+}
+
+.tv-app-label {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.tv-quick-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tv-quick-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tv-quick-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  backdrop-filter: blur(4px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🌸 MY MELODY THEME FULL-FIDELITY LAYOUT (Screenshot Replica)
+───────────────────────────────────────────────────────────── */
+.tv-preview-frame.mymelody-theme {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  box-shadow: 0 16px 50px rgba(244, 151, 176, 0.25);
+  border: 1px solid rgba(244, 151, 176, 0.35);
+  user-select: none;
+}
+
+.mymelody-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── Left Sidebar Navigation ─── */
+.mymelody-sidebar {
+  width: 20%;
+  min-width: 130px;
+  max-width: 165px;
+  background: rgba(255, 245, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(238, 152, 174, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 10px;
+  z-index: 10;
+}
+
+.mymelody-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 14px;
+}
+
+.mymelody-logo-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mymelody-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mymelody-brand-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #834055;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.mymelody-brand-sub {
+  font-size: 8.5px;
+  color: #B57D8E;
+  font-weight: 500;
+}
+
+.mymelody-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.mymelody-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #9E4760;
+  background: transparent;
+  transition: all 180ms ease;
+  cursor: pointer;
+}
+
+.mymelody-nav-item.active {
+  background: #F8D5DF;
+  color: #7A364C;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(238, 152, 174, 0.25);
+}
+
+.mymelody-footer {
+  margin-top: auto;
+  padding: 8px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.mymelody-footer-quote {
+  font-size: 8.5px;
+  color: #B57D8E;
+  font-family: 'Outfit', cursive, sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* ─── Main Content Area ─── */
+.mymelody-main {
+  flex: 1;
+  padding: 12px 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header Clock & Status */
+.mymelody-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mymelody-status-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mymelody-clock-wrap {
+  text-align: right;
+  line-height: 1;
+}
+
+.mymelody-clock {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A364C;
+}
+
+.mymelody-date {
+  font-size: 7.5px;
+  color: #9E4760;
+  margin-top: 1px;
+}
+
+.mymelody-header-icon {
+  color: #9E4760;
+  cursor: pointer;
+}
+
+/* ─── Hero Section: Connect Card + Mascot ─── */
+.mymelody-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 28%;
+  min-height: 85px;
+}
+
+.mymelody-connect-card {
+  flex: 1.15;
+  height: 100%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(238, 152, 174, 0.35);
+  cursor: pointer;
+  transition: all 200ms ease;
+  position: relative;
+}
+
+.mymelody-connect-card.focused {
+  transform: scale(1.02);
+  outline: 2.5px solid #FFFFFF;
+  box-shadow: 0 10px 30px rgba(238, 152, 174, 0.55);
+}
+
+.mymelody-connect-iconbox {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mymelody-connect-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.mymelody-connect-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.mymelody-connect-subtitle {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mymelody-connect-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+  font-size: 7.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 6px;
+}
+
+.mymelody-status-dot.ready {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #22C55E;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+}
+
+.mymelody-connect-arrow {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Ribbon Badge on Connect Card */
+.mymelody-card-ribbon-badge {
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  width: 36px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(220, 110, 140, 0.45));
+  z-index: 5;
+  animation: floatRibbon 3s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes floatRibbon {
+  0% { transform: rotate(-5deg) translateY(0px); }
+  100% { transform: rotate(5deg) translateY(-3px); }
+}
+
+/* Corner Flowers Deco */
+.mymelody-corner-flowers {
+  position: absolute;
+  bottom: 0px;
+  left: 2px;
+  max-height: 44px;
+  max-width: 68px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 6px rgba(220, 140, 170, 0.25));
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.95;
+  animation: floatFlower 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatFlower {
+  0% { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.04) rotate(2deg); }
+}
+
+/* Character Mascot Art & Mixed Stickers */
+.mymelody-mascot-container {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mymelody-script-title {
+  position: absolute;
+  top: 2px;
+  right: 18px;
+  font-size: 13px;
+  color: #E27B97;
+  font-family: 'Outfit', cursive, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.mymelody-floating-heart {
+  position: absolute;
+  color: #F8B4C6;
+  font-size: 10px;
+  animation: pulse 2s infinite ease-in-out;
+  z-index: 2;
+}
+.mymelody-floating-heart.h1 { top: 6px; left: 10px; font-size: 9px; }
+.mymelody-floating-heart.h2 { bottom: 10px; right: 8px; font-size: 11px; }
+.mymelody-floating-heart.h3 { top: 20px; right: 2px; font-size: 8px; animation-delay: 0.8s; }
+
+.mymelody-sticker-cluster-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mymelody-sticker-mascot-img {
+  max-height: 108px;
+  max-width: 95%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(220, 140, 170, 0.32));
+  transition: transform 250ms ease;
+  animation: floatMascot 3.5s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+/* Secondary / Mixed Decorative Stickers */
+.mymelody-sticker-secondary-img {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+  transition: all 250ms ease;
+}
+
+/* Full Deco Set (Ribbon + Flowers + Hearts cluster) */
+.mymelody-sticker-secondary-img.type-deco-set {
+  right: -4px;
+  bottom: 0px;
+  max-height: 84px;
+  filter: drop-shadow(0 6px 16px rgba(220, 130, 160, 0.35));
+  animation: floatSecondary 4s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+/* Ribbon Bow Accent */
+.mymelody-sticker-secondary-img.type-ribbon {
+  top: 4px;
+  left: 12px;
+  max-height: 44px;
+  filter: drop-shadow(0 4px 12px rgba(220, 130, 160, 0.35));
+  animation: floatSecondary 3.2s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+/* Flower Bouquet Accent */
+.mymelody-sticker-secondary-img.type-flowers {
+  right: 6px;
+  bottom: 4px;
+  max-height: 48px;
+  filter: drop-shadow(0 4px 12px rgba(220, 130, 160, 0.3));
+  animation: floatSecondary 3.8s ease-in-out infinite alternate;
+  z-index: 3;
+}
+
+/* Duo Mode: Side-by-side equal positioning */
+.mymelody-mascot-container.composition-duo .mymelody-sticker-cluster-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 4px;
+}
+
+.mymelody-mascot-container.composition-duo .mymelody-sticker-mascot-img {
+  max-height: 96px;
+  max-width: 58%;
+}
+
+.mymelody-mascot-container.composition-duo .mymelody-sticker-secondary-img {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  top: auto;
+  left: auto;
+  max-height: 72px;
+  max-width: 42%;
+}
+
+@keyframes floatMascot {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-5px) scale(1.02); }
+}
+
+@keyframes floatSecondary {
+  0% { transform: translateY(0px) rotate(-3deg); }
+  100% { transform: translateY(-4px) rotate(3deg); }
+}
+
+/* ─── Sections: Apps & Settings ─── */
+.mymelody-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mymelody-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #834055;
+  letter-spacing: -0.01em;
+}
+
+/* Favorite Apps Row */
+.mymelody-apps-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mymelody-app-card {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  max-width: 66px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid transparent;
+}
+
+.mymelody-app-card.focused {
+  transform: scale(1.08);
+  border-color: #EE98AE;
+  box-shadow: 0 6px 18px rgba(238, 152, 174, 0.45);
+}
+
+.mymelody-app-card.add-app {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px dashed rgba(222, 114, 142, 0.4);
+}
+
+.mymelody-app-icon-wrap {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mymelody-app-name {
+  font-size: 8px;
+  font-weight: 600;
+  color: #5C3A4D;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+  text-align: center;
+}
+
+.mymelody-add-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Quick Settings Row */
+.mymelody-quick-row {
+  display: flex;
+  gap: 7px;
+}
+
+.mymelody-quick-card {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 6px 8px;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px rgba(220, 160, 180, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1px;
+  cursor: pointer;
+  transition: all 180ms ease;
+  border: 1px solid transparent;
+}
+
+.mymelody-quick-card.active-theme {
+  background: linear-gradient(135deg, #FFF0F4, #FFE4EC);
+  border-color: rgba(222, 114, 142, 0.35);
+  box-shadow: 0 3px 10px rgba(238, 152, 174, 0.25);
+}
+
+.mymelody-quick-card:hover {
+  transform: translateY(-1px);
+}
+
+.mymelody-quick-title {
+  font-size: 8px;
+  font-weight: 600;
+  color: #5C3A4D;
+  margin-top: 2px;
+}
+
+.mymelody-quick-sub {
+  font-size: 6.5px;
+  color: #A67C8D;
+}
